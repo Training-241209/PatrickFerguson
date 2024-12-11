@@ -1,0 +1,119 @@
+:root {
+  --primary-color: rgb(41, 41, 41);
+  --secondary-color: rgb(255, 255, 255);
+  --accent-color1: rgb(141, 141, 141);
+  --accent-color2: rgb(148, 206, 203);
+  --accent-color1: rgb(102, 102, 102);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+h1 {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+form {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+input {
+  display: block;
+  padding: 3px 5px;
+  margin: 10px auto;
+  border-radius: 5px;
+  width: 250px;
+  background-color: transparent;
+  border-bottom: 2px solid rgba(105, 102, 102, 0.2);
+  text-decoration-color: antiquewhite;
+  color: var(--secondary-color);
+}
+
+#CreateAccountLink {
+  display: block;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--secondary-color);
+  padding: 3px 5px;
+  margin: 10px auto;
+  text-align: center;
+  width: 100px;
+}
+
+#CreateAccountLink:hover {
+  display: block;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--accent-color1);
+  padding: 3px 5px;
+  margin: 10px auto;
+  text-align: center;
+  width: 100px;
+}
+
+#CreateAccountLink:visited {
+  display: block;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--accent-color2);
+  padding: 3px 5px;
+  margin: 10px auto;
+  text-align: center;
+  width: 100px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  padding: 3px 5px;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-family: Helvetica, sans-serif;
+  color: var(--secondary-color);
+  background-color: rgba(88, 88, 88, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+#CreateAccountButton {
+  width: 150px;
+  padding: 3px 5px;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-family: Helvetica, sans-serif;
+  color: var(--secondary-color);
+  background-color: rgba(88, 88, 88, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: rgb(41, 38, 38);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--Declares document type and version-->
+
+<html lang="en">
+  <!--html tag is a root of our file and contains the document in a whole-->
+  <head>
+    <!--head tag contains metadata info-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Website</title>
+  </head>
+  <!-- This contains all elements that will be displayed on the browser-->
+  <body>
+    <h1>This is a heading</h1>
+    <!-- The largest heading-->
+    <h2>This is a heading</h2>
+    <h3>This is a heading</h3>
+    <h4>This is a heading</h4>
+    <h5>This is a heading</h5>
+    <h6>This is a heading</h6>
+    <p>This is a paragraph</p>
+    <img src="../sdk.png" alt="skd" />
+    <!-- src and alt are atributes that are included in the start tag. img is also a self closing tag-->
+    <ul>
+      <li>item 1</li>
+    </ul>
+    <ol>
+      <li>item 2</li>
+    </ol>
+
+    <a href="https://github.com/Training-241209"> Here is the link</a>
+
+    <!-- Container like elements-->
+    <div></div>
+    <!-- defines a section-->
+    <!--Semantic tags-->
+    <!-- Easier for dev due to more readable rather than using divs everywhere-->
+    <header></header>
+    <footer></footer>
+    <section></section>
+    <article></article>
+    <nav></nav>
+    <!--use your javascript in webpage-->
+    <script src="/yourJS.js"></script>
+
+    <!-- Inline and block elements-->
+    <p style="border: 2px solid blue">I am block</p>
+    <span style="border: 2px solid red">I am block</span>
+
+    <!-- Form elements-->
+    <form>
+      <label for="username">Username</label>
+      <input type="text" required name="username" />
+      <label for="password">Password</label>
+      <input type="password" name="password" required />
+      <label for="age">Age</label>
+      <input type="number" max="99" min="18" name="age" />
+
+      <input type="checkbox" name="terms" />
+      <label>Cat</label>
+      <input type="radio" name="pet" />
+
+      <input type="button" value="Submit" />
+    </form>
+
+    <section>
+      <div>
+        <h1>Some blog title</h1>
+        <p>Some blog title</p>
+        <img src="" alt="blogImg" />
+      </div>
+      <div>
+        <h1>Some blog title</h1>
+        <p>Some blog title</p>
+        <img src="" alt="blogImg" />
+      </div>
+      <div>
+        <h1>Some blog title</h1>
+        <p>Some blog title</p>
+        <img src="" alt="blogImg" />
+      </div>
+      <div>
+        <h1>Some blog title</h1>
+        <p>Some blog title</p>
+        <img src="" alt="blogImg" />
+      </div>
+    </section>
+  </body>
+</html>

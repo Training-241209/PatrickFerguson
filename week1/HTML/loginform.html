@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login</title>
+    <style>
+      * {
+        margin: 0;
+        border: 0;
+        padding: 0;
+      }
+      h1 {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+
+      #home_link {
+        border-bottom: 2px solid black;
+        padding-bottom: 4px;
+      }
+
+      .nav_links {
+        line-height: 2;
+        list-style-type: none;
+      }
+
+      form {
+        border: 2px solid red;
+        width: 500px;
+        margin: 0 auto;
+        border-radius: 5px;
+        background-color: rgba(148, 153, 160, 0.3);
+      }
+
+      input {
+        display: block;
+        padding: 3px 5px;
+        margin: 10px auto;
+        border-radius: 5px;
+        width: 250px;
+        background-color: transparent;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+      }
+
+      input[type="submit"]:hover {
+        width: 100px;
+        margin: 20px auto;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li id="home_link" , class="nav_links"><a>Home</a></li>
+          <li class="nav_links"><a>About</a></li>
+          <li class="nav_links"><a>Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Login</h1>
+        <form>
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
