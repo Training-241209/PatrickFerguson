@@ -29,7 +29,9 @@ public class UserService {
     public User registerUser(User user) {
         Optional<User> existingUser = userRepository.findByUsername(user.getUsername());
 
-        if (existingUser.isPresent())
+        if (existingUser.isPresent() || user.getUsername().trim().isEmpty() ||
+                user.getFirstName().trim().isEmpty() || user.getLastName().trim().isEmpty() ||
+                user.getPassword().trim().isEmpty())
             return null;
 
         Optional<Role> defaultRole = roleRepository.findByRoleName("Employee");

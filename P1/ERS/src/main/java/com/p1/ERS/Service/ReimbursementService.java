@@ -21,7 +21,7 @@ public class ReimbursementService {
 
     public Reimbursement createReimbursement(Reimbursement reimbursement, User user) {
         if (reimbursement.getDescription() == null || reimbursement.getDescription().trim().isEmpty()
-                || reimbursement.getDescription().length() > 255) {
+                || reimbursement.getDescription().length() > 255 || reimbursement.getAmount() <= 0) {
             return null;
         }
         reimbursement.setStatus("Pending");
