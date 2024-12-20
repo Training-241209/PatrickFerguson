@@ -1,5 +1,6 @@
 package com.p1.ERS.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -34,6 +35,15 @@ public class ReimbursementService {
             Reimbursement foundReimbursement = optionalReimbursement.get();
             foundReimbursement.setStatus(reimbursement.getStatus());
             return reimbursementRepository.save(foundReimbursement);
+        }
+        return null;
+    }
+
+    public List<Reimbursement> viewReimbursement(User user) {
+        if (user.getRole().getRoleName().equals("Admin")) {
+            return reimbursementRepository.findAll();
+        } else if (user.getRole().getRoleName().equals("Employee")) {
+            return reimbursementRepository.findByUser(user);
         }
         return null;
     }

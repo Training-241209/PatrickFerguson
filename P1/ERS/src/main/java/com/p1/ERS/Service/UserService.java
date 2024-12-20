@@ -46,19 +46,10 @@ public class UserService {
 
     public User login(String username, String password) {
         Optional<User> user = userRepository.findByUsername(username);
-        // User user = userRepository.login(username, password);
-
-        // if (username == null || username.trim().isEmpty() || password == null ||
-        // password.trim().isEmpty()
-        // || user == null) {
-        // return null;
-        // }
         if (user.isPresent() && user.get().getUsername().equals(username)
                 && BCrypt.checkpw(password, user.get().getPassword())) {
             return user.get();
         } else
             return null;
-
     }
-
 }

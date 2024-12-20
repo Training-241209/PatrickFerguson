@@ -1,5 +1,8 @@
 package com.p1.ERS.Controller;
 
+import java.util.List;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -45,10 +48,26 @@ public class ReimbursementController {
         User user = jwtService.decodeToken(token);
         if (user != null && user.getRole().getRoleName().equals("Admin")) {
             Reimbursement updatedReimbursement = reimbursementService.updateReimbursementStatus(reimbursement);
-            return ResponseEntity.status(HttpStatus.OK).body(updatedReimbursement);
+            if (updatedReimbursement != null)
+                return ResponseEntity.status(HttpStatus.OK).body(updatedReimbursement);
+            else
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         } else if (user != null && user.getRole().getRoleName().equals("Employee")) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
             // return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+
+    @PostMapping("/viewReimbursements")
+    public ResponseEntity<List<Reimbursement>> viewReimbursement(@RequestHeader(value = "Token") String token) {
+        User user = jwtService.decodeToken(token);
+        if (user != null) {
+            List<Reimbursement> foundReimbursements = reimbursementService.viewReimbursement(user);
+            if (foundReimbursements != null)
+                return ResponseEntity.status(HttpStatus.OK).body(foundReimbursements);
+            else
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
